@@ -281,6 +281,16 @@ function step()
 	// 	//break collisionTestSprings;		
 	// } else {
 
+	// check if player went through wall
+	if(player.x > (_game.width - 5))
+	{
+		player.x = -5;
+	}
+	if(player.x < -5)
+	{
+		player.x = _game.width - 5;
+	}
+
 	// check for walls
 	collisionTestWalls:
 	for (var i = 0; i < Walls.walls.length; i++)
